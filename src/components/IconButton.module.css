@@ -1,0 +1,7 @@
+.iconBtn{
+    display: flex;
+    border-radius: 8px;
+    padding: 16px;
+    border: none;
+    color: #FFF;
+}

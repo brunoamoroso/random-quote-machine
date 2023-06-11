@@ -29,7 +29,7 @@ function App() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setQuote('" ' + data.content + ' "');
+        setQuote(data.content);
         setAuthor("— " + data.author);
         randomColor();
       })
@@ -40,6 +40,7 @@ function App() {
     <div
       style={{
         display: "flex",
+        flexDirection: 'column',
         justifyContent: "center",
         alignItems: "center",
         width: "100vw",
@@ -47,7 +48,8 @@ function App() {
         backgroundColor: "rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')',
       }}
     >
-      <Quotebox quote={quote} author={author}></Quotebox>
+      <Quotebox quote={quote} author={author} color={"rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')'}></Quotebox>
+      <div style={{color: '#fff', fontWeight: '900', marginTop: '24px'}}>Made by <a href="https://linkedin.com/in/amorosbruno">Bruno Amoroso</a></div>
     </div>
   );
 }
