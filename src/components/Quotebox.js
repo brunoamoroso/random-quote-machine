@@ -10,7 +10,7 @@ function Quotebox({ quote, author }) {
       <hr></hr>
       <div>
         <button id="new-quote">New Quote</button>
-        <a id="tweet-quote"></a>
+        <a id="tweet-quote">twitter</a>
       </div>
     </div>
   );

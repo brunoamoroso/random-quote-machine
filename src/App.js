@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import Quotebox from "./components/Quotebox";
 import "./App.css";
 import { useEffect, useState } from "react";
@@ -6,20 +5,20 @@ import { useEffect, useState } from "react";
 function App() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
-  const [rgb, setRgb] = useState([]);
+  const [rgb, setRgb] = useState(['13','13','13']);
 
-  function randomColor(){
+  function randomColor() {
+    setRgb([]);
     const maxValue = 256;
-    let colorValue = 0;
     let i = 0;
 
-    while(i < 3){
-      colorValue = Math.floor(Math.random() * maxValue);
-      if(i == 0){
-        setRgb(colorValue);
-      }
+    while (i < 3) {
+      let colorValue = 0;
+      colorValue = Math.floor(Math.random() * maxValue).toString();
+      setRgb(arr => [...arr, colorValue])
       i++;
     }
+
     console.log(rgb);
   }
 
@@ -33,14 +32,23 @@ function App() {
       .then((resp) => resp.json())
       .then((data) => {
         setQuote('" ' + data.content + ' "');
-        setAuthor("— "+ data.author);
+        setAuthor("— " + data.author);
         randomColor();
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', width: '100vw', height: '100vh'}}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')',
+      }}
+    >
       <Quotebox quote={quote} author={author}></Quotebox>
     </div>
   );
