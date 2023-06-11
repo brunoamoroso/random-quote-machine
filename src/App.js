@@ -18,8 +18,6 @@ function App() {
       setRgb(arr => [...arr, colorValue])
       i++;
     }
-
-    console.log(rgb);
   }
 
   useEffect(() => {

@@ -1,18 +1,43 @@
-.quoteContainer{
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    align-items: center;
-    background-color: #FFF;
-    border-radius: 8px;
+.quoteContainer {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px 4px rgba(0, 0, 0, 0.15);
+  row-gap: 32px;
+  align-items: stretch;
 }
 
-.quoteText{
-    display: flex;
-    justify-content: center;
+.quoteTextContainer {
+  padding: 32px 32px  0px;
 }
 
-.quoteAuthor{
-    display: flex;
-    justify-content: flex-end;
+.quoteText {
+  display: flex;
+  justify-content: center;
+}
+
+.quoteAuthor {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quoteDivider {
+  display: flex;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.quoteActions {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 0px 32px 32px;
+}
+
+.quoteActions a {
+  display: block;
 }
