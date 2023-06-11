@@ -1,0 +1,18 @@
+.quoteContainer{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 8px;
+}
+
+.quoteText{
+    display: flex;
+    justify-content: center;
+}
+
+.quoteAuthor{
+    display: flex;
+    justify-content: flex-end;
+}
