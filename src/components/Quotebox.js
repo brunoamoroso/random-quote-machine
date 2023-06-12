@@ -17,7 +17,6 @@ function Quotebox({ quote, author, color }) {
           </i>
         </div>
         <span id="author" className={styles.quoteAuthor}>
-          {" "}
           {author}
         </span>
       </div>
