@@ -23,7 +23,7 @@ function Quotebox({ quote, author, color }) {
       </div>
       <hr className={styles.quoteDivider}></hr>
       <div className={styles.quoteActions}>
-        <a id="tweet-quote" href="/">
+        <a id="tweet-quote" href="https://www.twitter.com/intent/tweet" target="_blank" rel="noreferrer">
           <IconButton icon={<FaTwitter />} color={color} />
         </a>
         <Button name={"new-quote"} text={"New Quote"} color={color} />
