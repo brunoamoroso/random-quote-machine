@@ -11,17 +11,29 @@
 }
 
 .quoteTextContainer {
+  display: flex;
+  flex-direction: column;
   padding: 32px 32px  0px;
+  row-gap: 16px;
 }
 
 .quoteText {
   display: flex;
   justify-content: center;
+  column-gap: 4px;
+  align-items: stretch;
+}
+
+.quoteContent{
+  font-family: 'Lora', serif;
 }
 
 .quoteAuthor {
   display: flex;
   justify-content: flex-end;
+font-family: 'Parisienne', cursive;
+font-size: 24px;
+line-height: 32px;
 }
 
 .quoteDivider {

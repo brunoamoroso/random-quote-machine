@@ -7,11 +7,15 @@ function Quotebox({ quote, author, color }) {
   return (
     <div id="quote-box" className={styles.quoteContainer}>
       <div id="quote-text-container" className={styles.quoteTextContainer}>
-        <p id="text" className={styles.quoteText}>
-          <FaQuoteLeft />
-          {quote}
+        <div id="text" className={styles.quoteText} >
+          <i style={{marginTop: '10px', color:color}}><FaQuoteLeft /></i>
+          <p id="text" className={styles.quoteContent}>
+            {quote}
+          </p>
+          <i style={{display:'flex', alignItems: 'flex-end', marginBottom: '10px', color:color}}>
           <FaQuoteRight />
-        </p>
+          </i>
+        </div>
         <span id="author" className={styles.quoteAuthor}>
           {" "}
           {author}
@@ -20,7 +24,7 @@ function Quotebox({ quote, author, color }) {
       <hr className={styles.quoteDivider}></hr>
       <div className={styles.quoteActions}>
         <a id="tweet-quote" href="/">
-          <IconButton icon={<FaTwitter />} color={color}/>
+          <IconButton icon={<FaTwitter />} color={color} />
         </a>
         <Button name={"new-quote"} text={"New Quote"} color={color} />
       </div>

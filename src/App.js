@@ -49,7 +49,7 @@ function App() {
       }}
     >
       <Quotebox quote={quote} author={author} color={"rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')'}></Quotebox>
-      <div style={{color: '#fff', fontWeight: '900', marginTop: '24px'}}>Made by <a href="https://linkedin.com/in/amorosbruno">Bruno Amoroso</a></div>
+      <div style={{color: '#fff', fontWeight: '900', marginTop: '24px'}}>Made by <a style={{color: '#FFF'}} href="https://www.linkedin.com/in/amorosobruno/">Bruno Amoroso</a></div>
     </div>
   );
 }
