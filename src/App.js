@@ -36,6 +36,22 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
+  function newQuote(){
+    fetch("https://api.quotable.io/random", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setQuote(data.content);
+        setAuthor("— " + data.author);
+        randomColor();
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
     <div
       style={{
@@ -48,7 +64,7 @@ function App() {
         backgroundColor: "rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')',
       }}
     >
-      <Quotebox quote={quote} author={author} color={"rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')'}></Quotebox>
+      <Quotebox quote={quote} author={author} color={"rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')'} handleNewQuote={newQuote}></Quotebox>
       <div style={{color: '#fff', fontWeight: '900', marginTop: '24px'}}>Made by <a style={{color: '#FFF'}} href="https://www.linkedin.com/in/amorosobruno/">Bruno Amoroso</a></div>
     </div>
   );
