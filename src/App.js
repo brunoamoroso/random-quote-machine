@@ -62,6 +62,7 @@ function App() {
         width: "100vw",
         height: "100vh",
         backgroundColor: "rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')',
+        transition: 'all 0.5s ease-in-out',
       }}
     >
       <Quotebox quote={quote} author={author} color={"rgb("+rgb[0]+','+rgb[1]+','+rgb[2]+')'} handleNewQuote={newQuote}></Quotebox>
