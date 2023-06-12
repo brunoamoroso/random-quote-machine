@@ -3,7 +3,7 @@ import IconButton from "./IconButton";
 import { FaTwitter, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import styles from "./Quotebox.module.css";
 
-function Quotebox({ quote, author, color }) {
+function Quotebox({ quote, author, color, handleNewQuote}) {
   return (
     <div id="quote-box" className={styles.quoteContainer}>
       <div id="quote-text-container" className={styles.quoteTextContainer}>
@@ -25,7 +25,7 @@ function Quotebox({ quote, author, color }) {
         <a id="tweet-quote" href="/">
           <IconButton icon={<FaTwitter />} color={color} />
         </a>
-        <Button name={"new-quote"} text={"New Quote"} color={color} />
+        <Button name={"new-quote"} text={"New Quote"} color={color} handleClick={handleNewQuote}/>
       </div>
     </div>
   );
